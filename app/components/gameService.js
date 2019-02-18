@@ -140,9 +140,9 @@ function replay() {
   monsterAge();
   monsterHunger();
   if (game.session.random * 10 < 50) {
-    game.session.monsterPic = "../assets/images/bbear.png"
+    game.session.monsterPic = "./assets/images/bbear.png"
   } else {
-    game.session.monsterPic = "../assets/images/abear.png"
+    game.session.monsterPic = "./assets/images/abear.png"
   }
 
   if ($("#winBox")) {
