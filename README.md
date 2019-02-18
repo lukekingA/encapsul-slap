@@ -1,0 +1,4 @@
+<h1> Slap Game Redo</h1>
+<br>
+<p>This is a restructure of the Slap Game that is another one of my repo's. It has been remade to somewhat conform to the MVC pattern.</p>
+<p> Game play is initiated with the player(you) having no added attributes and only after experience can the player purchase them. The slap can be upgraded to a knife and the punch can be upgraded to a sword. Both of these increase the attack value of the coresponding action. The arrmor decreases the effective attack value of the bear. The addon attributes knife and sword will wearout after a few uses but the arrmor lasts for 200 turns esentially never wearing out. The players opponent (the bear) has random age and hunger. The age makes the players attacks move affective if the bear is young and even more so if the bear is old. The hunger increases the bears counter attack value.</p>
