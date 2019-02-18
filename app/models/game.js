@@ -9,7 +9,7 @@ export default class Game {
       punch: false,
       kick: false,
       slap: false,
-      monsterPic: '../assets/images/abear.png'
+      monsterPic: './assets/images/abear.png'
     }
     this.getName = true
     this.count = 0
