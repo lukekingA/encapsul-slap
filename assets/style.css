@@ -1,0 +1,76 @@
+body {
+  background-image: url('../assets/images/castel.jpg');
+  background-size: 100vw 100%;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  height: 100vh;
+}
+
+.custom-height {
+  height: calc(100vh - 260px)
+}
+
+.progressBar {
+  height: 22px;
+  background: #555;
+  border-radius: 5px;
+  border: 1px solid rgb(59, 59, 59)
+}
+
+.progressBar>span {
+  display: block;
+  height: 20px;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.644);
+  background-color: rgb(43, 194, 83);
+}
+
+.lose {
+  transition: all 2s ease;
+  transform: scale(2.1);
+  animation: rotate .2s .5s 4;
+  transform: rotate(15deg);
+  animation-direction: alternate;
+  width: 100%;
+  z-index: 300;
+}
+
+@keyframes rotate {
+
+  0% {
+    transform: rotate(20deg)
+  }
+
+  50% {
+    transform: rotate(-20deg)
+  }
+
+  100% {
+    transform: rotate(0deg)
+  }
+
+}
+
+.win {
+  transition: all 1s ease;
+  transform: scale(1.8);
+  width: 100%;
+  z-index: 300;
+}
+
+.popup {
+  width: 15rem;
+  position: absolute;
+  top: 2rem;
+  right: 50vw;
+  margin-right: -7.5rem;
+  z-index: 200;
+}
+
+#drop {
+  position: absolute;
+  top: 10rem;
+  left: 10vw;
+  z-index: 100;
+}
