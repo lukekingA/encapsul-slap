@@ -53,7 +53,7 @@ function updatePage() {
             <div class="progressBar"><span style="background-color:${player.strength.health > 35 ? 
             'rgb(43, 194, 83)' : 'red'}; width:${player.strength.health}%;"></span></div>
           </div>
-          <p class="text-right">experience: <span>${player.experience}</span></p>`
+          <p id="playerName" class="text-right">experience: <span>${player.experience}</span></p>`
   for (let key in player.addons) {
     template += `
     <button id="${player.addons[key].name}" class="btn bg-dark btn-sm text-white mt-2" type="button" data-upgrade="${key}" ${player.addons[key].set ? 'disabled' : ''}>${player.addons[key].name}</button>`

@@ -89,6 +89,7 @@ function winGame() {
   game.session.punch = true
   game.session.slap = true
   game.session.kick = true
+  setState('game', game)
   game.count++;
   let picture = $("#bearPicture").attr("src");
   if (monster.strength.health < player.strength.health) {
@@ -117,7 +118,7 @@ function winGame() {
             id="replay"
             class="btn btn-lg bg-dark text-white"
             type="button"
-          onclick="window.app.controlers.gameConstructor.replay()">
+          onclick="app.controlers.gameConstructor.replay()">
             Play Again
           </button>
         </div>
@@ -159,6 +160,9 @@ function replay() {
 export default class GameService {
   constructor() {
     console.log('gameService built')
+    monsterAge()
+    monsterHunger()
+    monsterName()
   }
 
   addsubscriber(dataName, funk) {
@@ -180,7 +184,7 @@ export default class GameService {
 
 
   attack(event) {
-    // I need to pass this function throught the controller so that when any of the display update occurs on a win condition the controler can handel the display portion. working right now.
+
     //attack evaluates the player attack and passes on to the monsterAttack function that evaluates the monster attack and sets values. It then tests for a winning condition and if so passes on to the winGame function for game end.
     let player = _state.player
     let monster = _state.monster
@@ -248,6 +252,7 @@ export default class GameService {
       tool.timer = tool.resetTimer;
     }
     player.name = "Soldier";
+    game.getName = true;
     player.wins = 0;
     game.count = 0;
     game.session.lastHitVal = 0
